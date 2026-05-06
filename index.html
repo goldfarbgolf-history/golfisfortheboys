@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Goldfarb Golf — History &amp; Records</title>
+<meta name="description" content="The official history of the Goldfarb Golf annual tour: trips, champions, course records, and player stats from 1997 to today." />
+<style>
+  :root{
+    --bg:#0b1d12; --bg2:#0f2a1a; --panel:#11321f; --line:#1f4a30;
+    --text:#e8f1e8; --muted:#9ab9a4; --accent:#ffd34d; --accent2:#7ad27a;
+    --shadow:0 8px 24px rgba(0,0,0,.35);
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{position:sticky;top:0;z-index:50;background:rgba(11,29,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:800;letter-spacing:.5px;font-size:1.15rem}
+  .brand span{color:var(--accent)}
+  .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
+  .nav a{color:var(--text);font-weight:600;font-size:.95rem}
+  .hero{max-width:var(--maxw);margin:0 auto;padding:60px 20px 30px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 10px;letter-spacing:-.5px}
+  .hero h1 span{color:var(--accent)}
+  .hero p{color:var(--muted);max-width:680px;margin:0 auto;font-size:1.05rem}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;max-width:var(--maxw);margin:30px auto;padding:0 20px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;box-shadow:var(--shadow)}
+  .stat .n{font-size:2rem;font-weight:800;color:var(--accent)}
+  .stat .l{color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:1px}
+  section{max-width:var(--maxw);margin:50px auto;padding:0 20px}
+  h2{font-size:1.7rem;margin:0 0 6px;border-left:4px solid var(--accent);padding-left:12px}
+  h2 + .sub{color:var(--muted);margin:0 0 18px;padding-left:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{background:#0d2616;color:var(--accent2);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.6px;position:sticky;top:0}
+  tr:hover td{background:rgba(255,211,77,.04)}
+  .scroll{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:12px}
+  .pill{display:inline-block;background:#0d2616;border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.78rem;color:var(--muted)}
+  .footer{max-width:var(--maxw);margin:40px auto 60px;padding:20px;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .controls input,.controls select{background:#0d2616;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit}
+  canvas{max-width:100%;height:320px!important}
+  .trip-card h3{margin:0 0 4px;color:var(--accent)}
+  .trip-card .meta{color:var(--muted);font-size:.85rem;margin-bottom:8px}
+  .trip-card .row{display:flex;justify-content:space-between;gap:8px;font-size:.92rem;border-top:1px solid var(--line);padding:6px 0}
+  .trip-card .row b{color:var(--accent2)}
+  .badge{display:inline-block;background:var(--accent);color:#1a1a1a;font-weight:800;font-size:.7rem;padding:2px 8px;border-radius:6px;margin-left:6px;text-transform:uppercase;letter-spacing:.5px}
+  details{background:#0d2616;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px}
+  summary{cursor:pointer;font-weight:600;color:var(--accent2)}
+  details[open] summary{margin-bottom:8px}
+  @media(max-width:600px){.nav ul{gap:10px;font-size:.9rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">⛳ Goldfarb <span>Golf</span></div>
+    <ul>
+      <li><a href="#trips">Trips</a></li>
+      <li><a href="#records">Records</a></li>
+      <li><a href="#players">Players</a></li>
+      <li><a href="#courses">Course Records</a></li>
+      <li><a href="#cup">GG Cup</a></li>
+      <li><a href="#charts">Charts</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>The <span>Goldfarb Golf</span> History Book</h1>
+  <p>An annual tradition since 1997. Champions, records, and every round that mattered — straight from the master spreadsheet.</p>
+</div>
+
+<div class="stats" id="topStats"></div>
+
+<section id="trips">
+  <h2>Trip History</h2>
+  <p class="sub">Every annual tour from 1997 to 2019 (2020–2025 being migrated from 18 Birdies).</p>
+  <div class="controls">
+    <input id="tripSearch" placeholder="Search trips, courses, champions…" />
+    <select id="tripSort">
+      <option value="desc">Newest first</option>
+      <option value="asc">Oldest first</option>
+    </select>
+  </div>
+  <div id="tripList" class="grid2"></div>
+</section>
+
+<section id="records">
+  <h2>Tour Records</h2>
+  <p class="sub">All-time individual and group records.</p>
+  <div class="card scroll">
+    <table id="recordsTable">
+      <thead><tr><th>Record</th><th>Holder</th><th>Mark</th><th>Where / When</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="players">
+  <h2>Player Profiles</h2>
+  <p class="sub">All-time stats per Tour Gopher. Sortable.</p>
+  <div class="controls">
+    <input id="playerSearch" placeholder="Find a player…" />
+  </div>
+  <div class="card scroll">
+    <table id="playerTable">
+      <thead><tr>
+        <th data-k="name">Player</th>
+        <th data-k="bestGross">Best 18 Gross</th>
+        <th data-k="bestNet">Best 18 Net</th>
+        <th data-k="bestTripGross" class="num">Best Trip Gross</th>
+        <th data-k="bestTripNet" class="num">Best Trip Net</th>
+        <th data-k="cupAppears" class="num">GG Cup Apps</th>
+        <th data-k="cupPoints" class="num">Cup Pts</th>
+        <th data-k="cupAvg" class="num">Cup Avg</th>
+        <th data-k="bofcApps" class="num">BofC Apps</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="courses">
+  <h2>Course Records</h2>
+  <p class="sub">Lowest gross and net ever shot at each course on tour.</p>
+  <div class="card scroll">
+    <table id="courseTable">
+      <thead><tr><th>Course</th><th>Gross</th><th>Holder</th><th>Net</th><th>Holder</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cup">
+  <h2>GG Cup Results</h2>
+  <p class="sub">The Ryder-Cup-style team event since 2008.</p>
+  <div class="card scroll">
+    <table id="cupTable">
+      <thead><tr><th>Year</th><th>Matchup</th><th>Captains</th><th>Winner</th><th>Score</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="charts">
+  <h2>Charts</h2>
+  <p class="sub">Visualizing the data.</p>
+  <div class="grid2">
+    <div class="card"><h3 style="margin-top:0">Tour Gross Average by Year</h3><canvas id="chartGross"></canvas></div>
+    <div class="card"><h3 style="margin-top:0">Course Difficulty (Avg Slope by Year)</h3><canvas id="chartSlope"></canvas></div>
+    <div class="card"><h3 style="margin-top:0">Top Players — All-Time GG Cup Points</h3><canvas id="chartCup"></canvas></div>
+    <div class="card"><h3 style="margin-top:0">Best Trip Gross Average — Top Players</h3><canvas id="chartBest"></canvas></div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>Goldfarb Golf · est. 1997 · Built with the master spreadsheet</p>
+  <p>Have updates from 18 Birdies (2020–2025)? Send 'em to Mort.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// ---------- DATA ----------
+const TRIPS = [
+  {year:1997, name:"Myrtle Beach 1997", courses:"Beachwood, MBN Southcreek, MBN West, Sandpiper Bay, Carolina Shores, Possum Trot", rating:69.03, slope:117.7, gross:"Ang", net:"-", bofc:"-", champion:"-", hotd:"-", hotdScore:"-", goty:"-"},
+  {year:1998, name:"Atlantic City 1998", courses:"Sand Barrens, Avalon, Cape May National, Mays Landing", rating:69.63, slope:122.5, gross:"Ira", net:"-", bofc:"-", champion:"-", hotd:"-", hotdScore:"-", goty:"-"},
+  {year:1999, name:"Myrtle Beach 1999", courses:"Wicked Stick, Heron Point, MBN West, Tradition Club", rating:69.08, slope:118.5, gross:"Ira", net:"-", bofc:"-", champion:"-", hotd:"-", hotdScore:"-", goty:"-"},
+  {year:2000, name:"Myrtle Beach 2000", courses:"Wizard, Man O' War, Pawleys, Heathland, Moorland, Marsh Harbour", rating:69.47, slope:121, gross:"Ira", net:"-", bofc:"Ang, Ira, Mort, Gordon", champion:"Gordon", hotd:"-", hotdScore:"-", goty:"-"},
+  {year:2001, name:"Myrtle Beach 2001", courses:"Wild Wing Falcon, Moorland, Blackmoor, Parkland, Heritage Club, Oyster Bay", rating:69.57, slope:122.7, gross:"Rich", net:"Steve", bofc:"Ang, Ira, Mort, Kenny", champion:"Ang", hotd:"-", hotdScore:"-", goty:"Steve"},
+  {year:2002, name:"Myrtle Beach 2002", courses:"Witch, Pawleys, Willbrook, Parkland, Arrowhead, Long Bay", rating:69.7, slope:124.7, gross:"Ang", net:"Mc", bofc:"Ang, Ira, Mort, Shawn", champion:"Shawn", hotd:"-", hotdScore:"-", goty:"Ang"},
+  {year:2003, name:"Myrtle Beach 2003", courses:"WW Avocet, Caledonia, Heritage Club, Parkland, Heathland, Barefoot Norman", rating:68.93, slope:122.2, gross:"Ira", net:"Ira", bofc:"Ang, Ira, Gordon, Kenny", champion:"Ira", hotd:"Gordon", hotdScore:73, goty:"Ira"},
+  {year:2004, name:"Myrtle Beach 2004", courses:"Heathland, Heather Glen, Glen Dornoch, Parkland, Kings North, Intl World Tour", rating:70.25, slope:124.7, gross:"Mandel", net:"Ira", bofc:"Ira, Gordon, Round, Shawn", champion:"Round", hotd:"Gordon", hotdScore:76, goty:"Round"},
+  {year:2005, name:"Myrtle Beach 2005", courses:"Heather Glen, Rivers Edge, Tiger's Eye, Tidewater, TPC, Barefoot Fazio", rating:70, slope:127.2, gross:"Mandel", net:"Round", bofc:"Mort, Shawn, Round, Steve", champion:"Shawn", hotd:"Rich", hotdScore:78, goty:"Rich"},
+  {year:2006, name:"Myrtle Beach 2006", courses:"Moorland, Grande Dunes, Tidewater, Barefoot Dye, Barefoot Love, True Blue", rating:69.8, slope:125.5, gross:"Mandel", net:"Shawn", bofc:"Shawn, Dave, Ted, Nogs", champion:"Ted (tie-break)", hotd:"Ted", hotdScore:78, goty:"Ted"},
+  {year:2007, name:"Myrtle Beach 2007", courses:"Arrowhead, True Blue, Caledonia, Parkland, Kings North, TPC", rating:69.8, slope:128, gross:"Mandel", net:"Kirsh", bofc:"Shawn, Kirsh, Ted, Nogs", champion:"Nogs", hotd:"Kirsh", hotdScore:76, goty:"Kirsh"},
+  {year:2008, name:"Myrtle Beach 2008", courses:"Glen Dornoch, Oyster Bay, Thistle, BF Fazio, Grande Dunes", rating:68.82, slope:123, gross:"Mandel", net:"Steve", cup:"Matzoh Balls vs. Long Balls", capt:"Mandel / Rich", winner:"Team Matzoh Balls", score:"14.0 to 9.0", goty:"Steve"},
+  {year:2009, name:"Myrtle Beach 2009", courses:"Parkland, True Blue, Founders Club, TPC, King's North", rating:70.18, slope:128, gross:"Mandel", net:"Dave", cup:"Rake & Bake vs. The Round Army", capt:"Steve / Round", winner:"Team Rake & Bake", score:"16.5 to 11.5", goty:"Dubs"},
+  {year:2010, name:"Myrtle Beach 2010", courses:"Barefoot Dye, Leopard's Chase, Panther's Run, Rivers Edge, Dunes Club", rating:69.86, slope:127.4, gross:"Mandel, Rich", net:"Ang", cup:"Tiger's Wood vs. Chwatsky's All-Stars", capt:"Dubs / Kirsh", winner:"Tiger's Wood", score:"12.0 to 11.0", par3:"Ang", par3Score:45, goty:"Rich"},
+  {year:2011, name:"Myrtle Beach 2011", courses:"Heritage Club, Caledonia, True Blue, Pawleys, Grande Dunes", rating:69.84, slope:128, gross:"Mandel", net:"Shawn", cup:"Los Locos vs. Team Toxic", capt:"Gordon / Mc", winner:"Los Locos", score:"13.5 to 9.5", par3:"Ang", par3Score:49, goty:"Shawn"},
+  {year:2012, name:"Myrtle Beach 2012", courses:"Barefoot Love, Glen Dornoch, Heather Glen, Oyster Bay, Tidewater", rating:69.86, slope:126.4, gross:"Mandel", net:"Round", cup:"Dream Team vs. Gilmo's Basterds", capt:"Ted / Shawn", winner:"Dream Team", score:"19.0 to 8.0", par3:"Nogs", par3Score:48, goty:"Gordon"},
+  {year:2013, name:"Kohler 2013", courses:"Meadow Valleys, Straits, Irish, River, Irish", rating:70.32, slope:133.4, gross:"Rich", net:"Shawn", cup:"Nogs Nation vs. Peteini's", capt:"Nogs / Pete", winner:"Nogs Nation", score:"15.0 to 13.0", goty:"Ira"},
+  {year:2014, name:"Myrtle Beach 2014", courses:"Parkland, Caledonia, True Blue, Rivers Edge, Dunes Club", rating:69.6, slope:128.6, gross:"Ira", net:"Shawn", cup:"Suck It Bitches vs. Team Sasquatch", capt:"Andrew / Paul", winner:"Team Sasquatch", score:"15.0 to 13.0", goty:"Dubs"},
+  {year:2015, name:"Pinehurst 2015", courses:"Pinehurst No. 9, No. 4, No. 7, No. 2, No. 8", rating:70.46, slope:127.6, gross:"Rich", net:"Paul", cup:"T-Bombs vs. Snap Crackle & Poppis", capt:"JT / Poppi", winner:"TIE", score:"13.5 to 13.5", goty:"Paul"},
+  {year:2016, name:"Scottsdale 2016", courses:"Grayhawk Talon, We-Ko-Pa Cholla, We-Ko-Pa Saguaro, Boulders South, Troon North Pinnacle", rating:69.28, slope:128.2, gross:"Tom", net:"Tom", cup:"In and Good vs. High & Straight", capt:"Mc / Steve", winner:"High & Straight", score:"17.5 to 10.5", goty:"Tom"},
+  {year:2017, name:"Charleston 2017", courses:"Rivertowne CC, Kiawah Turtle Point, Kiawah Ocean, Wild Dunes Links, Wild Dunes Harbor", rating:69.9, slope:128.2, gross:"Tom", net:"Steve", cup:"All Drives Matter vs. Power Cord", capt:"Kirsh / Dubs", winner:"Power Cord", score:"15.0 to 14.0", goty:"Steve"},
+  {year:2018, name:"Kohler 2018", courses:"Irish, River, Meadow Valleys, Straits, Erin Hills", rating:70.36, slope:132.6, gross:"List", net:"Ang, Shawn", cup:"The imMORTals vs. Green Machine", capt:"Rich / Mandel", winner:"The imMORTals", score:"19.5 to 7.5", goty:"-"},
+  {year:2019, name:"Myrtle Beach 2019", courses:"True Blue, Pawleys, Caledonia, Heritage Club, TPC", rating:70.38, slope:132.5, gross:"Ira", net:"Ira", cup:"Schillin n Chillin vs. UnPeteable", capt:"Larry / Pete", winner:"Schillin n Chillin", score:"10 to 6", goty:"-"}
+];
+
+const TOUR_RECORDS = [
+  {label:"Lowest 18 Gross", holder:"Tom", mark:"79", where:"We-Ko-Pa Cholla (2016)"},
+  {label:"Lowest 18 Net", holder:"Steve", mark:"56", where:"Wild Dunes Harbor (2017)"},
+  {label:"Best Trip Gross Avg", holder:"Tom", mark:"81.5", where:"Scottsdale 2016"},
+  {label:"Best Trip Net Avg", holder:"Steve", mark:"65.5", where:"Charleston 2017"},
+  {label:"Most Gross Scoring Titles", holder:"Mandel", mark:"9", where:"2004–2012"},
+  {label:"Most Net Scoring Titles", holder:"Shawn", mark:"5", where:"2006, '11, '13, '14, '18"},
+  {label:"Most GG Cup Points (Total)", holder:"Rich", mark:"36", where:"2008–2019"},
+  {label:"Highest GG Cup Points Avg", holder:"Shawn", mark:"3.18", where:"2008–2019"},
+  {label:"Most GG Cup Team Points (single)", holder:"The imMORTals", mark:"19.5", where:"2018"},
+  {label:"Best GG Cup Team Record", holder:"Mandel", mark:"9-2-1", where:"2008–2019"},
+  {label:"Best GG Cup Singles Record", holder:"Shawn", mark:"7-1-1", where:"2008–2019"},
+  {label:"Par 3 Tourney Wins", holder:"Ang", mark:"2", where:"2010–2011"},
+  {label:"Par 3 Tourney Best Score", holder:"Ang", mark:"45", where:"2010"},
+  {label:"HotD Tourney Wins", holder:"Gordon", mark:"2", where:"2003–2004"},
+  {label:"HotD Best Score", holder:"Gordon", mark:"73", where:"2003"},
+  {label:"BofC Titles", holder:"Shawn", mark:"2", where:"2002, 2005"},
+  {label:"BofC Skins (single round)", holder:"Shawn", mark:"11", where:"2005"},
+  {label:"BofC Appearances", holder:"Ira / Shawn", mark:"5", where:"Ira ('00–'04), Shawn ('02,'04–'07)"}
+];
+
+const COURSE_RECORDS = [
+  {course:"Arrowhead", gross:94, gh:"Ang", net:68, nh:"Ang"},
+  {course:"Barefoot Dye", gross:86, gh:"Mandel", net:63, nh:"Shawn"},
+  {course:"Barefoot Fazio", gross:85, gh:"Mort", net:70, nh:"Round, Kirsh"},
+  {course:"Barefoot Love", gross:84, gh:"Mort", net:66, nh:"Mort"},
+  {course:"Barefoot Norman", gross:92, gh:"Shawn", net:69, nh:"Shawn"},
+  {course:"Caledonia", gross:84, gh:"Mort", net:61, nh:"Mc, Shawn"},
+  {course:"Dunes Club", gross:90, gh:"Mandel", net:70, nh:"Ang"},
+  {course:"Glen Dornoch", gross:85, gh:"Mandel", net:70, nh:"Nogs"},
+  {course:"Grande Dunes", gross:81, gh:"Tom", net:66, nh:"JT"},
+  {course:"Heather Glen", gross:86, gh:"Tom", net:67, nh:"Steve"},
+  {course:"Heathland", gross:91, gh:"Ira", net:66, nh:"Ira"},
+  {course:"Heritage Club", gross:85, gh:"Tom", net:68, nh:"Ang, Steve"},
+  {course:"Int'l World Tour", gross:94, gh:"Ang", net:70, nh:"Round"},
+  {course:"Kings North", gross:83, gh:"Mandel", net:63, nh:"Dave"},
+  {course:"Leopard's Chase", gross:89, gh:"Mandel", net:67, nh:"Ang"},
+  {course:"Meadow Valleys", gross:87, gh:"Poppi", net:73, nh:"Steve"},
+  {course:"Moorland", gross:102, gh:"Mort", net:78, nh:"Mc"},
+  {course:"Oyster Bay", gross:82, gh:"Mandel", net:63, nh:"Round"},
+  {course:"Parkland", gross:88, gh:"Shawn", net:61, nh:"Shawn"},
+  {course:"Pawleys", gross:86, gh:"Mandel", net:66, nh:"Ang"},
+  {course:"Rivers Edge", gross:83, gh:"Mandel, Mort, Ira", net:61, nh:"Round"},
+  {course:"Tidewater", gross:83, gh:"Mort", net:66, nh:"Shawn"},
+  {course:"Tiger's Eye", gross:83, gh:"Mandel", net:65, nh:"Shawn"},
+  {course:"Thistle", gross:80, gh:"Mandel", net:67, nh:"Mandel"},
+  {course:"TPC", gross:84, gh:"Mandel", net:68, nh:"Dave"},
+  {course:"True Blue", gross:84, gh:"Mandel, List", net:63, nh:"Mc"},
+  {course:"Irish", gross:82, gh:"Poppi", net:67, nh:"Shawn"},
+  {course:"River", gross:86, gh:"Mort", net:70, nh:"Shawn"},
+  {course:"Straits", gross:87, gh:"Poppi", net:70, nh:"Mc"},
+  {course:"Erin Hills", gross:84, gh:"List", net:69, nh:"AJ"}
+];
+
+const PLAYERS = [
+  {name:"Angelo",  bestGross:"88 — Oyster Bay (08)",     bestNet:"64 — Oyster Bay (01)",      bestTripGross:91.75, bestTripNet:69.25, hdcp:22.3, cupAppears:12, cupPoints:33,    cupAvg:2.75, bofcApps:1},
+  {name:"Dave W",  bestGross:"91 — Kings North (09)",    bestNet:"63 — Kings North (09)",     bestTripGross:98,    bestTripNet:70,    hdcp:19.1, cupAppears:10, cupPoints:26.5,  cupAvg:2.65, bofcApps:1},
+  {name:"Dave M",  bestGross:"80 — Thistle (08)",        bestNet:"67 — Thistle (08)",         bestTripGross:85,    bestTripNet:71,    hdcp:11.8, cupAppears:12, cupPoints:32,    cupAvg:2.67, bofcApps:2},
+  {name:"Ira",     bestGross:"82 — Boulders South (16)", bestNet:"66 — Heathland (03)",       bestTripGross:87.67, bestTripNet:72,    hdcp:12.9, cupAppears:12, cupPoints:35,    cupAvg:2.92, bofcApps:5},
+  {name:"Gordon",  bestGross:"93 — Marsh Harbour (00)",  bestNet:"69 — Caledonia (03)",       bestTripGross:100.4, bestTripNet:73.75, hdcp:33.4, cupAppears:6,  cupPoints:11.5,  cupAvg:1.92, bofcApps:1},
+  {name:"Jeff K",  bestGross:"92 — Caledonia (07)",      bestNet:"65 — Oyster Bay (01)",      bestTripGross:96.6,  bestTripNet:69.2,  hdcp:22.4, cupAppears:9,  cupPoints:20,    cupAvg:2.22, bofcApps:0},
+  {name:"J.T.",    bestGross:"99 — Grande Dunes (08)",   bestNet:"66 — Grande Dunes (08)",    bestTripGross:106,   bestTripNet:74.25, hdcp:34,   cupAppears:7,  cupPoints:9.5,   cupAvg:1.36, bofcApps:0},
+  {name:"John",    bestGross:"93 — Grande Dunes (08)",   bestNet:"67 — Kings North (07)",     bestTripGross:101.75,bestTripNet:73,    hdcp:26.7, cupAppears:12, cupPoints:21,    cupAvg:1.75, bofcApps:1},
+  {name:"Kenny",   bestGross:"92 — WW Falcon (01)",      bestNet:"64 — BF Dye (06)",          bestTripGross:100,   bestTripNet:71.67, hdcp:23.9, cupAppears:0,  cupPoints:0,     cupAvg:0,    bofcApps:1},
+  {name:"Leigh",   bestGross:"108 — Wizard (00)",        bestNet:"70 — Witch (02)",           bestTripGross:127.33,bestTripNet:82.67, hdcp:43.2, cupAppears:0,  cupPoints:0,     cupAvg:0,    bofcApps:0},
+  {name:"Mc",      bestGross:"96 — Troon North Pinnacle (16)", bestNet:"61 — Caledonia (11)", bestTripGross:104,   bestTripNet:70.75, hdcp:22.5, cupAppears:11, cupPoints:29,    cupAvg:2.64, bofcApps:0},
+  {name:"Mike",    bestGross:"96 — Heather Glen (04)",   bestNet:"69 — Heather Glen (04)",    bestTripGross:100,   bestTripNet:73,    hdcp:25,   cupAppears:0,  cupPoints:0,     cupAvg:0,    bofcApps:0},
+  {name:"Rich",    bestGross:"82 — Boulders South (16)", bestNet:"66 — BF Love (06)",         bestTripGross:86.25, bestTripNet:72,    hdcp:12.1, cupAppears:12, cupPoints:36,    cupAvg:3.00, bofcApps:3},
+  {name:"Pete",    bestGross:"86 — Kiawah Turtle Point (17)", bestNet:"67 — True Blue (09)",  bestTripGross:92.5,  bestTripNet:74,    hdcp:16.6, cupAppears:11, cupPoints:20.5,  cupAvg:1.86, bofcApps:0},
+  {name:"Round",   bestGross:"111 — Oyster Bay (12)",    bestNet:"61 — Rivers Edge (05)",     bestTripGross:121.75,bestTripNet:70.75, hdcp:41.3, cupAppears:8,  cupPoints:20,    cupAvg:2.5,  bofcApps:0},
+  {name:"Shawn",   bestGross:"86 — Caledonia (11)",      bestNet:"61 — Parkland (07)",        bestTripGross:94,    bestTripNet:69,    hdcp:22.1, cupAppears:11, cupPoints:35,    cupAvg:3.18, bofcApps:1},
+  {name:"Steve",   bestGross:"101 — Wild Dunes Harbor (17)", bestNet:"56 — Wild Dunes Harbor (17)", bestTripGross:107, bestTripNet:65.5, hdcp:34.5, cupAppears:12, cupPoints:27.5, cupAvg:2.29, bofcApps:0},
+  {name:"Ted",     bestGross:"91 — Caledonia (14)",      bestNet:"65 — Caledonia (14)",       bestTripGross:103.25,bestTripNet:73.8,  hdcp:26.3, cupAppears:12, cupPoints:25.5,  cupAvg:2.13, bofcApps:1},
+  {name:"Tom",     bestGross:"79 — We-Ko-Pa Cholla (16)",bestNet:"65 — Boulders South (16)",  bestTripGross:81.5,  bestTripNet:67.75, hdcp:11.7, cupAppears:10, cupPoints:25,    cupAvg:2.5,  bofcApps:1},
+  {name:"List",    bestGross:"83 — Wild Dunes Links (17)",bestNet:"71 — Wild Dunes Links (17)",bestTripGross:88,   bestTripNet:75.75, hdcp:12.3, cupAppears:3,  cupPoints:7,     cupAvg:2.33, bofcApps:0},
+  {name:"Andrew",  bestGross:"89 — Erin Hills (18)",     bestNet:"67 — Boulders South (16)",  bestTripGross:94,    bestTripNet:72.25, hdcp:20.2, cupAppears:8,  cupPoints:13.5,  cupAvg:1.69, bofcApps:0},
+  {name:"Paul",    bestGross:"91 — Pinehurst No. 2 (15)",bestNet:"68 — Pinehurst No. 2 (15)", bestTripGross:97.33, bestTripNet:76,    hdcp:21.8, cupAppears:5,  cupPoints:13.5,  cupAvg:2.7,  bofcApps:1}
+];
+
+// ---------- TOP STATS ----------
+const yearsCount = TRIPS.length;
+const cupYears = TRIPS.filter(t=>t.cup).length;
+const courses = new Set();
+TRIPS.forEach(t=>t.courses.split(/, ?/).forEach(c=>courses.add(c.trim())));
+const stats = [
+  {n:yearsCount, l:"Annual Trips"},
+  {n:`${TRIPS[0].year}–${TRIPS[TRIPS.length-1].year}`, l:"Years on Tour"},
+  {n:courses.size, l:"Different Courses"},
+  {n:cupYears, l:"GG Cup Years"},
+  {n:PLAYERS.length, l:"Tour Gophers"}
+];
+document.getElementById("topStats").innerHTML = stats.map(s=>`<div class="stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`).join("");
+
+// ---------- TRIPS ----------
+function renderTrips(){
+  const q = document.getElementById("tripSearch").value.toLowerCase();
+  const dir = document.getElementById("tripSort").value;
+  let list = TRIPS.filter(t=>{
+    return !q || (t.name+" "+t.courses+" "+(t.gross||"")+" "+(t.net||"")+" "+(t.winner||"")+" "+(t.cup||"")+" "+(t.goty||"")).toLowerCase().includes(q);
+  });
+  list.sort((a,b)=> dir==="asc" ? a.year-b.year : b.year-a.year);
+  document.getElementById("tripList").innerHTML = list.map(t=>`
+    <div class="card trip-card">
+      <h3>${t.name} ${t.cup?'<span class="badge">GG Cup</span>':''}</h3>
+      <div class="meta">${t.courses}</div>
+      <div class="row"><span>Avg Rating / Slope</span><b>${t.rating} / ${t.slope}</b></div>
+      <div class="row"><span>Gross Champion</span><b>${t.gross||"-"}</b></div>
+      <div class="row"><span>Net Champion</span><b>${t.net||"-"}</b></div>
+      ${t.bofc?`<div class="row"><span>BofC Field</span><b>${t.bofc}</b></div>`:""}
+      ${t.champion?`<div class="row"><span>BofC Champion</span><b>${t.champion}</b></div>`:""}
+      ${t.cup?`<div class="row"><span>GG Cup</span><b>${t.cup}</b></div>`:""}
+      ${t.capt?`<div class="row"><span>Captains</span><b>${t.capt}</b></div>`:""}
+      ${t.winner?`<div class="row"><span>Cup Winner</span><b>${t.winner} (${t.score})</b></div>`:""}
+      ${t.hotd?`<div class="row"><span>HotD Winner</span><b>${t.hotd} (${t.hotdScore})</b></div>`:""}
+      ${t.par3?`<div class="row"><span>Par 3 Winner</span><b>${t.par3} (${t.par3Score})</b></div>`:""}
+      ${t.goty&&t.goty!=="-"?`<div class="row"><span>Tour Gopher of the Year</span><b>${t.goty}</b></div>`:""}
+    </div>`).join("");
+}
+document.getElementById("tripSearch").addEventListener("input",renderTrips);
+document.getElementById("tripSort").addEventListener("change",renderTrips);
+renderTrips();
+
+// ---------- RECORDS ----------
+document.querySelector("#recordsTable tbody").innerHTML =
+  TOUR_RECORDS.map(r=>`<tr><td>${r.label}</td><td>${r.holder}</td><td><b>${r.mark}</b></td><td>${r.where}</td></tr>`).join("");
+
+// ---------- COURSE RECORDS ----------
+document.querySelector("#courseTable tbody").innerHTML =
+  COURSE_RECORDS.sort((a,b)=>a.course.localeCompare(b.course))
+  .map(c=>`<tr><td>${c.course}</td><td><b>${c.gross}</b></td><td>${c.gh}</td><td><b>${c.net}</b></td><td>${c.nh}</td></tr>`).join("");
+
+// ---------- CUP TABLE ----------
+document.querySelector("#cupTable tbody").innerHTML =
+  TRIPS.filter(t=>t.cup).map(t=>`<tr><td>${t.year}</td><td>${t.cup}</td><td>${t.capt||""}</td><td><b>${t.winner||""}</b></td><td>${t.score||""}</td></tr>`).join("");
+
+// ---------- PLAYERS ----------
+let playerSortKey="cupPoints", playerSortDir=-1;
+function renderPlayers(){
+  const q = document.getElementById("playerSearch").value.toLowerCase();
+  const list = PLAYERS.filter(p=>!q||p.name.toLowerCase().includes(q))
+    .sort((a,b)=>{
+      const va=a[playerSortKey], vb=b[playerSortKey];
+      if(typeof va==="number" && typeof vb==="number") return (va-vb)*playerSortDir;
+      return String(va).localeCompare(String(vb))*playerSortDir;
+    });
+  document.querySelector("#playerTable tbody").innerHTML = list.map(p=>`
+    <tr>
+      <td><b>${p.name}</b></td>
+      <td>${p.bestGross}</td>
+      <td>${p.bestNet}</td>
+      <td>${p.bestTripGross}</td>
+      <td>${p.bestTripNet}</td>
+      <td>${p.cupAppears}</td>
+      <td>${p.cupPoints}</td>
+      <td>${p.cupAvg.toFixed(2)}</td>
+      <td>${p.bofcApps}</td>
+    </tr>`).join("");
+}
+document.querySelectorAll("#playerTable thead th").forEach(th=>{
+  th.style.cursor="pointer";
+  th.addEventListener("click",()=>{
+    const k = th.dataset.k;
+    if(!k) return;
+    if(playerSortKey===k) playerSortDir*=-1;
+    else { playerSortKey=k; playerSortDir=-1; }
+    renderPlayers();
+  });
+});
+document.getElementById("playerSearch").addEventListener("input",renderPlayers);
+renderPlayers();
+
+// ---------- CHARTS ----------
+const years = TRIPS.map(t=>t.year);
+new Chart(document.getElementById("chartGross"), {
+  type:"line",
+  data:{labels:years,datasets:[{label:"Avg Course Rating",data:TRIPS.map(t=>t.rating),borderColor:"#ffd34d",backgroundColor:"rgba(255,211,77,.2)",tension:.3}]},
+  options:{plugins:{legend:{labels:{color:"#e8f1e8"}}},scales:{x:{ticks:{color:"#9ab9a4"}},y:{ticks:{color:"#9ab9a4"}}}}
+});
+new Chart(document.getElementById("chartSlope"), {
+  type:"bar",
+  data:{labels:years,datasets:[{label:"Avg Slope",data:TRIPS.map(t=>t.slope),backgroundColor:"#7ad27a"}]},
+  options:{plugins:{legend:{labels:{color:"#e8f1e8"}}},scales:{x:{ticks:{color:"#9ab9a4"}},y:{ticks:{color:"#9ab9a4"}}}}
+});
+const topCup = [...PLAYERS].sort((a,b)=>b.cupPoints-a.cupPoints).slice(0,10);
+new Chart(document.getElementById("chartCup"), {
+  type:"bar",
+  data:{labels:topCup.map(p=>p.name),datasets:[{label:"GG Cup Points",data:topCup.map(p=>p.cupPoints),backgroundColor:"#ffd34d"}]},
+  options:{indexAxis:"y",plugins:{legend:{labels:{color:"#e8f1e8"}}},scales:{x:{ticks:{color:"#9ab9a4"}},y:{ticks:{color:"#9ab9a4"}}}}
+});
+const topGross = [...PLAYERS].sort((a,b)=>a.bestTripGross-b.bestTripGross).slice(0,10);
+new Chart(document.getElementById("chartBest"), {
+  type:"bar",
+  data:{labels:topGross.map(p=>p.name),datasets:[{label:"Best Trip Gross Avg",data:topGross.map(p=>p.bestTripGross),backgroundColor:"#7ad27a"}]},
+  options:{indexAxis:"y",plugins:{legend:{labels:{color:"#e8f1e8"}}},scales:{x:{ticks:{color:"#9ab9a4"}},y:{ticks:{color:"#9ab9a4"}}}}
+});
+</script>
+</body>
+</html>
